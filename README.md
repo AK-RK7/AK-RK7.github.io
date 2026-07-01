@@ -19,7 +19,7 @@ I focus on building scalable, reliable, and automated cloud-native platforms.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Cloud:** AWS, Azure  
 - **Containers:** Docker, Kubernetes, MicroK8s  
@@ -32,10 +32,10 @@ I focus on building scalable, reliable, and automated cloud-native platforms.
 
 ---
 
-## 📬 Contact
+## Contact
 
-- 📧 Email: arunkumar.rk7@gmail.com  
-- 💼 LinkedIn: https://linkedin.com/in/arun-kumar-58104a416
-- 💻 GitHub: https://github.com/AK-RK7
+- Email: arunkumar.rk7@gmail.com  
+- LinkedIn: https://linkedin.com/in/arun-kumar-58104a416
+- GitHub: https://github.com/AK-RK7
 
 ---
