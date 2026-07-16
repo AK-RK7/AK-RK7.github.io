@@ -27,7 +27,6 @@ body {
 }
 
 
-
 header {
 
     text-align:center;
@@ -157,6 +156,20 @@ a {
 
 }
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  margin: 0;
+}
+
+.project-header span {
+  font-size: 14px;
+  color: #555;
+}
 
 
 footer {
