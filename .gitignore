@@ -1,2 +1,50 @@
-.css
-.md
+# =========================================================
+# GitHub Pages - MLOps & AI Platform Engineer Portfolio
+# =========================================================
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Node.js (if used later for local tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / distribution directories
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local development files
+*.local
+
+# Generated coverage
+coverage/
+
+# OS / editor metadata
+.DS_Store
