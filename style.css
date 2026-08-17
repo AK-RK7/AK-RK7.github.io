@@ -1,9 +1,8 @@
 /* =========================================================
    ARUNKUMAR KESAVAN
    MLOps & AI Platform Engineer
-   Professional AI/ML CV Portfolio
+   Clean GitHub Pages Portfolio
    ========================================================= */
-
 
 
 /* ---------------------------------------------------------
@@ -11,21 +10,24 @@
    --------------------------------------------------------- */
 
 :root {
-  --page: #f3f5f8;
+  --bg: #f6f7f9;
   --paper: #ffffff;
 
-  --ink: #172033;
-  --heading: #0b1220;
-  --muted: #5d687a;
+  --text: #273142;
+  --heading: #111827;
+  --muted: #667085;
 
-  --blue: #2563eb;
-  --blue-dark: #1d4ed8;
-  --blue-light: #eaf2ff;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #eff6ff;
 
-  --border: #dfe4eb;
-  --border-light: #e9edf2;
+  --border: #e5e7eb;
+  --border-dark: #d1d5db;
 
-  --max-width: 1080px;
+  --header: #111827;
+  --header-soft: #1f2937;
+
+  --max-width: 1040px;
 }
 
 
@@ -33,7 +35,9 @@
    Reset
    --------------------------------------------------------- */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -44,9 +48,9 @@ html {
 body {
   margin: 0;
 
-  background: var(--page);
+  background: var(--bg);
 
-  color: var(--ink);
+  color: var(--text);
 
   font-family:
     Inter,
@@ -58,8 +62,8 @@ body {
     Arial,
     sans-serif;
 
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -76,21 +80,21 @@ strong {
 
 
 /* ---------------------------------------------------------
-   Main Page
+   Page
    --------------------------------------------------------- */
 
 .page {
-  width: min(
-    calc(100% - 40px),
-    var(--max-width)
-  );
+  width: min(100% - 32px, var(--max-width));
 
-  margin: 38px auto;
+  margin: 32px auto;
 
   background: var(--paper);
 
-  box-shadow:
-    0 12px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  overflow: hidden;
 }
 
 
@@ -99,23 +103,18 @@ strong {
    --------------------------------------------------------- */
 
 .header {
-  padding: 48px 58px 34px;
+  padding: 42px 52px 30px;
+
+  background: var(--header);
 
   color: #ffffff;
-
-  background:
-    linear-gradient(
-      120deg,
-      #0b1220 0%,
-      #111c33 55%,
-      #172554 100%
-    );
 }
 
 .header-top {
   display: flex;
 
   align-items: flex-start;
+
   justify-content: space-between;
 
   gap: 40px;
@@ -126,42 +125,45 @@ strong {
 
   color: #ffffff;
 
-  font-size: clamp(2.5rem, 6vw, 3.7rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
 
-  font-weight: 750;
+  font-weight: 700;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
 
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .role {
-  margin: 12px 0 0;
-
-  color: #bfdbfe;
-
-  font-size: 1.3rem;
-
-  font-weight: 500;
-
-  letter-spacing: -0.01em;
-}
-
-.header-label {
-  padding-top: 7px;
+  margin: 9px 0 0;
 
   color: #93c5fd;
 
-  font-size: 0.72rem;
+  font-size: 1.15rem;
+
+  font-weight: 500;
+}
+
+.header-label {
+  padding-top: 5px;
+
+  color: #9ca3af;
+
+  font-size: 0.7rem;
 
   font-weight: 700;
 
   line-height: 1.7;
 
-  letter-spacing: 0.13em;
+  letter-spacing: 0.12em;
 
   text-align: right;
 }
+
+
+/* ---------------------------------------------------------
+   Contact
+   --------------------------------------------------------- */
 
 .contact {
   display: flex;
@@ -172,24 +174,24 @@ strong {
 
   gap: 0;
 
-  margin-top: 32px;
+  margin-top: 28px;
 
-  padding-top: 20px;
+  padding-top: 18px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 
-  font-size: 0.88rem;
+  font-size: 0.84rem;
 }
 
 .contact span,
 .contact a {
-  margin-right: 17px;
+  margin-right: 18px;
 
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .contact span {
-  color: #cbd5e1;
+  color: #d1d5db;
 }
 
 .contact a {
@@ -197,30 +199,24 @@ strong {
 
   text-decoration: none;
 
-  border-bottom: 1px solid rgba(147, 197, 253, 0.5);
-
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .contact a:hover {
   color: #93c5fd;
-
-  border-color: #93c5fd;
 }
 
 
 /* ---------------------------------------------------------
-   Main Content
+   Main
    --------------------------------------------------------- */
 
 main {
-  padding: 0 58px;
+  padding: 0 52px;
 }
 
 section {
-  padding: 42px 0;
+  padding: 38px 0;
 
   border-bottom: 1px solid var(--border);
 }
@@ -229,18 +225,23 @@ section:last-child {
   border-bottom: 0;
 }
 
+
+/* ---------------------------------------------------------
+   Section Headings
+   --------------------------------------------------------- */
+
 section h2 {
   position: relative;
 
-  margin: 0 0 25px;
+  margin: 0 0 22px;
 
-  padding-bottom: 11px;
+  padding-bottom: 10px;
 
   color: var(--heading);
 
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 
-  font-weight: 750;
+  font-weight: 700;
 
   letter-spacing: -0.02em;
 }
@@ -253,12 +254,10 @@ section h2::after {
   left: 0;
   bottom: 0;
 
-  width: 44px;
-  height: 3px;
+  width: 36px;
+  height: 2px;
 
-  background: var(--blue);
-
-  border-radius: 2px;
+  background: var(--primary);
 }
 
 
@@ -267,9 +266,11 @@ section h2::after {
    --------------------------------------------------------- */
 
 section:first-child p {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 
   color: var(--muted);
+
+  font-size: 0.94rem;
 }
 
 section:first-child p:last-child {
@@ -284,8 +285,7 @@ section:first-child p:last-child {
 .skills {
   display: grid;
 
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   border-top: 1px solid var(--border);
 
@@ -293,20 +293,21 @@ section:first-child p:last-child {
 }
 
 .skill {
-  padding: 22px 24px;
+  padding: 20px 22px;
 
   border-right: 1px solid var(--border);
+
   border-bottom: 1px solid var(--border);
 }
 
 .skill h3 {
-  margin: 0 0 7px;
+  margin: 0 0 6px;
 
   color: var(--heading);
 
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .skill p {
@@ -314,7 +315,7 @@ section:first-child p:last-child {
 
   color: var(--muted);
 
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 
   line-height: 1.65;
 }
@@ -325,17 +326,17 @@ section:first-child p:last-child {
    --------------------------------------------------------- */
 
 .experience {
-  padding-bottom: 28px;
+  padding-bottom: 26px;
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .experience:last-child {
-  margin-bottom: 0;
-
   padding-bottom: 0;
+
+  margin-bottom: 0;
 
   border-bottom: 0;
 }
@@ -347,9 +348,9 @@ section:first-child p:last-child {
 
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 24px;
 
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .experience h3 {
@@ -357,21 +358,21 @@ section:first-child p:last-child {
 
   color: var(--heading);
 
-  font-size: 1.06rem;
+  font-size: 1rem;
 
-  font-weight: 750;
+  font-weight: 700;
 
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .company {
   margin: 3px 0 0;
 
-  color: var(--blue);
+  color: var(--primary);
 
-  font-size: 0.9rem;
+  font-size: 0.87rem;
 
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .experience time {
@@ -379,9 +380,9 @@ section:first-child p:last-child {
 
   color: var(--muted);
 
-  font-size: 0.84rem;
+  font-size: 0.82rem;
 
-  font-weight: 600;
+  font-weight: 500;
 
   white-space: nowrap;
 }
@@ -390,16 +391,18 @@ section:first-child p:last-child {
 .project ul {
   margin: 0;
 
-  padding-left: 21px;
+  padding-left: 20px;
 }
 
 .experience li,
 .project li {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   color: var(--muted);
 
-  font-size: 0.94rem;
+  font-size: 0.9rem;
+
+  line-height: 1.65;
 }
 
 .experience li:last-child,
@@ -408,7 +411,7 @@ section:first-child p:last-child {
 }
 
 li::marker {
-  color: var(--blue);
+  color: var(--primary);
 }
 
 
@@ -417,9 +420,9 @@ li::marker {
    --------------------------------------------------------- */
 
 .project {
-  padding: 25px 0;
+  padding: 24px 0;
 
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .project:first-of-type {
@@ -433,19 +436,19 @@ li::marker {
 }
 
 .project-title {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .project h3 {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 
   color: var(--heading);
 
-  font-size: 1.04rem;
+  font-size: 1rem;
 
-  font-weight: 750;
+  font-weight: 700;
 
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .project h3 a {
@@ -461,21 +464,21 @@ li::marker {
 }
 
 .project h3 a:hover {
-  color: var(--blue);
+  color: var(--primary);
 
-  border-color: var(--blue);
+  border-color: var(--primary);
 }
 
 .tech {
   margin: 0;
 
-  color: var(--blue);
+  color: var(--primary);
 
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 
   font-weight: 700;
 
-  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 
@@ -494,23 +497,23 @@ li::marker {
 
   justify-content: space-between;
 
-  gap: 25px;
+  gap: 20px;
 
-  padding: 16px 4px;
+  padding: 14px 4px;
 
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .education strong {
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .education span {
   color: var(--muted);
 
-  font-size: 0.9rem;
+  font-size: 0.86rem;
 
-  font-weight: 650;
+  font-weight: 600;
 }
 
 
@@ -521,15 +524,15 @@ li::marker {
 .certifications {
   margin: 0;
 
-  padding-left: 21px;
+  padding-left: 20px;
 }
 
 .certifications li {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   color: var(--muted);
 
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .certifications li:last-child {
@@ -542,13 +545,13 @@ li::marker {
    --------------------------------------------------------- */
 
 footer {
-  padding: 25px 58px 32px;
+  padding: 22px 52px 26px;
 
-  color: #7a8595;
+  color: #8a94a3;
 
   border-top: 1px solid var(--border);
 
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 
   text-align: center;
 }
@@ -561,22 +564,19 @@ footer {
 @media (max-width: 800px) {
 
   .page {
-    width: min(
-      calc(100% - 24px),
-      var(--max-width)
-    );
+    width: min(100% - 24px, var(--max-width));
 
     margin: 20px auto;
   }
 
   .header {
-    padding: 38px 32px 28px;
+    padding: 36px 32px 28px;
   }
 
   .header-top {
     flex-direction: column;
 
-    gap: 18px;
+    gap: 16px;
   }
 
   .header-label {
@@ -589,14 +589,10 @@ footer {
     padding: 0 32px;
   }
 
-  .skills {
-    grid-template-columns: 1fr;
-  }
-
   .experience-title {
     flex-direction: column;
 
-    gap: 4px;
+    gap: 3px;
   }
 
   .experience time {
@@ -607,7 +603,6 @@ footer {
     padding-left: 32px;
     padding-right: 32px;
   }
-
 }
 
 
@@ -615,10 +610,12 @@ footer {
    Mobile
    --------------------------------------------------------- */
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
 
   body {
-    font-size: 15px;
+    background: #ffffff;
+
+    font-size: 14px;
   }
 
   .page {
@@ -626,29 +623,31 @@ footer {
 
     margin: 0;
 
-    box-shadow: none;
+    border: 0;
+
+    border-radius: 0;
   }
 
   .header {
-    padding: 32px 22px 25px;
+    padding: 30px 22px 24px;
   }
 
   .header h1 {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
   }
 
   .role {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .header-label {
-    font-size: 0.66rem;
+    font-size: 0.64rem;
   }
 
   .contact {
     display: block;
 
-    margin-top: 25px;
+    margin-top: 22px;
   }
 
   .contact span,
@@ -665,15 +664,26 @@ footer {
   }
 
   section {
-    padding: 34px 0;
+    padding: 32px 0;
   }
 
   section h2 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  section:first-child p,
+  .experience li,
+  .project li,
+  .certifications li {
+    font-size: 0.88rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
   }
 
   .skill {
-    padding: 19px;
+    padding: 18px;
   }
 
   .education > div {
@@ -681,18 +691,17 @@ footer {
 
     flex-direction: column;
 
-    gap: 3px;
+    gap: 2px;
   }
 
   footer {
-    padding: 22px;
+    padding: 20px 22px;
   }
-
 }
 
 
 /* ---------------------------------------------------------
-   Print / ATS PDF
+   Print / PDF
    --------------------------------------------------------- */
 
 @media print {
@@ -700,7 +709,7 @@ footer {
   @page {
     size: A4;
 
-    margin: 12mm;
+    margin: 10mm;
   }
 
   body {
@@ -708,7 +717,7 @@ footer {
 
     color: #111827;
 
-    font-size: 10pt;
+    font-size: 9.5pt;
 
     line-height: 1.45;
   }
@@ -718,15 +727,18 @@ footer {
 
     margin: 0;
 
-    box-shadow: none;
+    border: 0;
+
+    border-radius: 0;
   }
 
   .header {
-    padding: 22px 25px;
+    padding: 20px 24px;
 
     background: #111827 !important;
 
     print-color-adjust: exact;
+
     -webkit-print-color-adjust: exact;
   }
 
@@ -735,17 +747,25 @@ footer {
   }
 
   main {
-    padding: 0 25px;
+    padding: 0 24px;
   }
 
   section {
-    padding: 18px 0;
+    padding: 16px 0;
   }
 
   section h2 {
-    font-size: 13pt;
+    margin-bottom: 10px;
 
-    margin-bottom: 12px;
+    font-size: 12pt;
+  }
+
+  section:first-child p,
+  .experience li,
+  .project li,
+  .certifications li,
+  .skill p {
+    font-size: 8.7pt;
   }
 
   .skills {
@@ -753,24 +773,21 @@ footer {
   }
 
   .skill {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
 
   .experience {
-    padding-bottom: 14px;
+    padding-bottom: 12px;
 
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .project {
-    padding: 13px 0;
+    padding: 11px 0;
   }
 
-  .experience li,
-  .project li,
-  .certifications li,
-  .skill p {
-    font-size: 9.2pt;
+  footer {
+    padding: 12px 24px;
   }
 
   a {
@@ -778,9 +795,31 @@ footer {
 
     text-decoration: none;
   }
+}
 
-  footer {
-    padding: 15px 25px;
+
+/* ---------------------------------------------------------
+   Accessibility
+   --------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+
+  outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   Reduced Motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
   }
 
+  * {
+    transition: none !important;
+  }
 }
